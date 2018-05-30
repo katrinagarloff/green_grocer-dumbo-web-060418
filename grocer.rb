@@ -20,13 +20,14 @@ end
  
 def apply_coupons(cart, coupons)
   coup_veg = ""
+  new_hash = 
   coupons.each do |hash_chunk|
     hash_chunk.each do |k,v|
       
       
   cart.each do |vegetable, chunk|
     if v.to_s == vegetable.to_s
-      
+      new_hash
       cart[vegetable][:count] -= hash_chunk[:num]
       
        
