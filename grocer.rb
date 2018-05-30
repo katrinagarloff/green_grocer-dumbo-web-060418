@@ -28,7 +28,7 @@ def apply_coupons(cart, coupons)
   cart.each do |vegetable, chunk|
     if v.to_s == vegetable.to_s
      
-      new_hash.store(vegetable, {:price => cart[vegetable][:price], :clearance => cart[vegetable][:clearance], [:count] -= hash_chunk[:num]})
+      new_hash.store(vegetable, {:price => cart[vegetable][:price], :clearance => cart[vegetable][:clearance], :count => cart[vegetable][:count] -= hash_chunk[:num]})
       
        
      coup_veg = vegetable
