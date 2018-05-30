@@ -1,3 +1,4 @@
+require "pry"
 def consolidate_cart(cart)
   new_hash = Hash.new{|hsh,key| hsh[key] = {:count => 0}}
   
