@@ -20,17 +20,17 @@ end
 def apply_coupons(cart, coupons)
   coup_veg = ""
   coupons.each do |hash_chunk|
-   # hash_chunk.each do |k,v|
-       #hash_chunk[:item]
-      
-      
+    hash_chunk.each do |k,v|
+       
+      puts k
+      binding.pry
   cart.each do |vegetable, chunk|
-    if hash_chunk[:item].to_s == vegetable.to_s
+    if k.to_s == vegetable.to_s
       
       cart[vegetable][:count] -= coupons[:num]
       coup_veg = vegetable
       
-    #end
+    end
   end
    cart["#{coup_veg} W/COUPON"] ={:price => coupons[:cost], :clearance => true, :count => cart[coup_veg][:count]}
 end
