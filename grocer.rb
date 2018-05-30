@@ -23,7 +23,7 @@ def apply_coupons(cart, coupons)
   coupons.each do |hash_chunk|
     hash_chunk.each do |k,v|
        
-      puts k
+      puts v
       binding.pry
   cart.each do |vegetable, chunk|
     if k.to_s == vegetable.to_s
