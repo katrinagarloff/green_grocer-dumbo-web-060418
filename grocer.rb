@@ -21,8 +21,8 @@ end
 def apply_coupons(cart, coupons)
   coup_veg = ""
   new_hash = Hash.new{|hsh, key| hsh[key] = {:count => 0} }
-  #coupons.each do |hash_chunk|
-   # hash_chunk.each do |k,v|
+  coupons.each do |hash_chunk|
+   hash_chunk.each do |k,v|
       
       
   cart.each do |vegetable, chunk|
@@ -41,9 +41,9 @@ def apply_coupons(cart, coupons)
       
      #end
       
-    #end
+    end
     
-  #end
+  end
   
 end
 puts new_hash
@@ -51,7 +51,7 @@ end
    
     
     
-end
+
 
 apply_coupons({
   "AVOCADO" => {:price => 3.0, :clearance => true, :count => 6},
