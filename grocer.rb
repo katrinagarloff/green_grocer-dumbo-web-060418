@@ -25,7 +25,7 @@ def apply_coupons(cart, coupons)
       
       
   cart.each do |vegetable, chunk|
-    if hash_chunk[:item] == coupons[:item].to_s
+    if hash_chunk[:item].to_s == vegetable.to_s
       
       cart[vegetable][:count] -= coupons[:num]
       coup_veg = vegetable
