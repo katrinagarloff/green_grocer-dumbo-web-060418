@@ -29,10 +29,11 @@ def apply_coupons(cart, coupons)
       
       cart[vegetable][:count] -= hash_chunk[:num]
       
-       cart["#{vegetable} W/COUPON"] ={:price => hash_chunk[:cost], :clearance => true, :count => cart[vegetable][:count]}
-     # coup_veg = vegetable
+       
+     coup_veg = vegetable
       
     end
+    cart["#{coup_veg} W/COUPON"] ={:price => hash_chunk[:cost], :clearance => true, :count => cart[coup_veg][:count]}
   end
   
 end
