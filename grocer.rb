@@ -34,7 +34,7 @@ def apply_coupons(cart, coupons)
        
        elsif new_hash[vegetable]
        
-       new_hash[vegetable][:count] -= hash_chunk[:num]
+       #new_hash[vegetable][:count] -= hash_chunk[:num]
        new_hash["#{vegetable} W/COUPON"][:count] = new_hash[vegetable][:count]
      end
       
