@@ -43,11 +43,11 @@ end
 end
 
 apply_coupons({
-  "AVOCADO" => {:price => 3.0, :clearance => true, :count => 3},
+  "AVOCADO" => {:price => 3.0, :clearance => true, :count => 6},
   "KALE"    => {:price => 3.0, :clearance => false, :count => 1}
 }, 	[
 		{:item => "AVOCADO", :num => 2, :cost => 5.00},
-		{:item => "BEER", :num => 2, :cost => 20.00},
+		{:item => "AVOCADO", :num => 2, :cost => 20.00},
 		{:item => "CHEESE", :num => 3, :cost => 15.00}
 	])
 
