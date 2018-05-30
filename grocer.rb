@@ -20,23 +20,23 @@ end
  
 def apply_coupons(cart, coupons)
   coup_veg = ""
-  new_hash = Hash.new{|hsh, key| hsh[key] = {:count => 0} }
+  new_hash = Hash.new{|hsh, key| hsh[key] = {:price => 0, :clearance => false, :count => 0} }
   coupons.collect do |hash_chunk|
     hash_chunk.collect do |k,v|
       
       
   cart.collect do |vegetable, chunk|
-    if v.to_s == vegetable.to_s
-     if new_hash[vegetable][:count]
-       new_hash[vegetable.to_s][:count] -= hash_chunk[:num]
-       new_hash["#{vegetable} W/COUPON"][:count] = new_hash[vegetable][:count]
+    #if v.to_s == vegetable.to_s
+     #if new_hash[vegetable][:count]
+      # new_hash[vegetable][:count] -= hash_chunk[:num]
+      # new_hash["#{vegetable} W/COUPON"][:count] = new_hash[vegetable][:count]
        
-     else
-       new_hash[vegetable].store(:price, cart[vegetable][:price]) #, :clearance => cart[vegetable][:clearance], :count => cart[vegetable][:count] -= hash_chunk[:num])
+     #else
+       #new_hash[vegetable].store(:price, cart[vegetable][:price]) #, :clearance => cart[vegetable][:clearance], :count => cart[vegetable][:count] -= hash_chunk[:num])
       
       # new_hash.store("#{vegetable} W/COUPON", {:price => hash_chunk[:cost], :clearance => true, :count => cart[vegetable][:count]})
       
-     end
+     #end
       
     end
     
