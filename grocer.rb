@@ -28,7 +28,7 @@ def apply_coupons(cart, coupons)
   cart.collect do |vegetable, chunk|
     if v.to_s == vegetable.to_s
      if new_hash[vegetable][:count]
-       new_hash[vegetable][:count] -= hash_chunk[:num]
+       new_hash[vegetable.to_s][:count] -= hash_chunk[:num]
        new_hash["#{vegetable} W/COUPON"][:count] = new_hash[vegetable][:count]
        
      else
