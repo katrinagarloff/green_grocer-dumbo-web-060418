@@ -21,11 +21,11 @@ end
 def apply_coupons(cart, coupons)
   coup_veg = ""
   new_hash = Hash.new{|hsh, key| hsh[key] = {:count => 0} }
-  coupons.each do |hash_chunk|
-    hash_chunk.each do |k,v|
+  coupons.collect do |hash_chunk|
+    hash_chunk.collect do |k,v|
       
       
-  cart.each do |vegetable, chunk|
+  cart.collect do |vegetable, chunk|
     if v.to_s == vegetable.to_s
      if new_hash[vegetable][:count]
        new_hash[vegetable][:count] -= hash_chunk[:num]
