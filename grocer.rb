@@ -47,7 +47,7 @@ puts new_hash
 end
    
     
-    puts cart
+    
 end
 
 apply_coupons({
