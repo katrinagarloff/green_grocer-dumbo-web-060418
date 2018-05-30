@@ -35,7 +35,7 @@ def apply_coupons(cart, coupons)
     end
     
   end
-  cart["#{coup_veg} W/COUPON"] ={:price => hash_chunk[:cost], :clearance => true, :count => cart[coup_veg][:count]}
+  cart.store("#{coup_veg} W/COUPON", {:price => hash_chunk[:cost], :clearance => true, :count => cart[coup_veg][:count]})
 end
 end
    
