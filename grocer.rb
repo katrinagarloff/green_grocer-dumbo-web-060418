@@ -26,7 +26,7 @@ def apply_coupons(cart, coupons)
       puts v
       binding.pry
   cart.each do |vegetable, chunk|
-    if k.to_s == vegetable.to_s
+    if v.to_s == vegetable.to_s
       
       cart[vegetable][:count] -= coupons[:num]
       coup_veg = vegetable
